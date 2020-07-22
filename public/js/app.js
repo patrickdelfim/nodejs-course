@@ -15,7 +15,7 @@ weatherForm.addEventListener("submit", (event) => {
   msg1.textContent = "Loading";
   const location = inputForm.value;
 
-  fetch(`http://localhost:3000/weather?address=${location}`)
+  fetch(`/weather?address=${location}`)
     .then((res) => res.json())
     .then((res) => {
       adicionar(res);
